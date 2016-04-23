@@ -5,5 +5,5 @@ if [ "$1" = 'master' ]; then
 fi
 
 if [ "$1" = 'slave' ]; then
-  exec /usr/bin/mesos slave $2 --containerizers=docker
+  exec /usr/bin/mesos slave $2
 fi
