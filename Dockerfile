@@ -22,3 +22,6 @@ COPY bootstrap.sh /opt/bootstrap.sh
 #Add this layer's bootstrap to /etc/bootstrap.sh
 RUN cat /opt/bootstrap.sh >> /etc/bootstrap.sh
 RUN rm /opt/bootstrap.sh
+
+# Mesos port
+EXPOSE 5050
