@@ -17,3 +17,8 @@ RUN apt-get -y install mesos
 ENV MESOS_WORK_DIR=/var/lib/mesos
 ENV MESOS_LOG_DIR=/var/log/mesos
 ENV MESOS_LOGGING_LEVEL=INFO
+
+COPY bootstrap.sh /opt/bootstrap.sh
+#Add this layer's bootstrap to /etc/bootstrap.sh
+RUN cat /opt/bootstrap.sh >> /etc/bootstrap.sh
+RUN rm /opt/bootstrap.sh
